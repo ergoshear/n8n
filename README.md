@@ -11,7 +11,7 @@ set explicitly in the GitOps deployment:
 | --- | --- |
 | `N8N_INSTANCE_AI_MODEL_URL` | `https://olla.ergoshear.dev/olla/openai/v1` |
 | `N8N_INSTANCE_AI_MODEL_API_KEY` | `olla` (placeholder) |
-| `N8N_INSTANCE_AI_MODEL` | `llama3` |
+| `N8N_INSTANCE_AI_MODEL` | `/models/gpt-oss-20b-MXFP4.gguf` |
 | `N8N_INSTANCE_AI_THINKING_ENABLED` | `false` |
 
 The sandbox service and SearXNG settings remain configured in GitOps.
@@ -22,5 +22,6 @@ Agent tools require a model/backend that supports tool calls.
 Workflow nodes use their own credentials, not the Instance AI defaults. For
 OpenAI or OpenAI Chat Model nodes, configure an OpenAI credential with Base URL
 `https://olla.ergoshear.dev/olla/openai/v1` and API key `olla`, then select
-`llama3` as the model. Use chat completions rather than the Responses API.
+`/models/gpt-oss-20b-MXFP4.gguf` as the model. Use chat completions rather
+than the Responses API.
 Existing workflows and credentials are not automatically rewritten.
